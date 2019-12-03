@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign-in-form</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d357e3b57e.js" crossorigin="anonymous"></script>  
+    <script type="text/javascript">
+     window.onload = function() {
+         document.getElementById('tologin').style.display = 'block';
+         document.getElementById('toregister').style.display = 'none';
+    }
+    function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+        document.getElementById('tologin').style.display = 'block';
+        document.getElementById('toregister').style.display = 'none';
+        // document.getElementById('redhat1').style.display = 'none';
+        // document.getElementById('aix1').style.display = 'none';
+    } 
+    else if(document.getElementById('noCheck').checked) {
+        document.getElementById('toregister').style.display = 'block';
+        document.getElementById('tologin').style.display = 'none';
+        // document.getElementById('redhat1').style.display = 'none';
+        // document.getElementById('aix1').style.display = 'none';
+      }
+    // }
+    //  function yesnoCheck1() {
+    // if(document.getElementById('redhat').checked) {
+    //    document.getElementById('redhat1').style.display = 'block';
+    //    document.getElementById('aix1').style.display = 'none';
+    //  }
+    // if(document.getElementById('aix').checked) {
+    //    document.getElementById('aix1').style.display = 'block';
+    //    document.getElementById('redhat1').style.display = 'none';
+    //    }
+     }
+     </script>
+</head>
+<body>
+<!-- Select os :<br>
+windows
+<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"/>Sign in
+<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"/>Join us
+<br>
+<div id="ifYes" style="display:none">
+Windows 2008<input type="radio" name="win" value="2008"/>
+Windows 2012<input type="radio" name="win" value="2012"/>
+</div>
+<div id="ifNo" style="display:none">
+Red Hat<input type="radio" name="unix" onclick="javascript:yesnoCheck1();" value="2008" id="redhat"/>
+AIX<input type="radio" name="unix" onclick="javascript:yesnoCheck1();"  
+value="2012" id="aix"/>
+</div>
+<div id="redhat1" style="display:none">
+Red Hat 6.0<input type="radio" name="redhat" value="2008" id="redhat6.0"/>
+Red Hat 6.1<input type="radio" name="redhat" value="2012" id="redhat6.1"/>
+</div>
+<div id="aix1" style="display:none">
+aix 6.0<input type="radio" name="aix" value="2008" id="aix6.0"/>
+aix 6.1<input type="radio" name="aix" value="2012" id="aix6.1"/>
+</div> -->
+
+<section class="container">
+    <img src="image.png" alt="">
+        <div id="wrapper">
+                <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="yesCheck"/>Sign in
+                <input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="noCheck"/>Join us
+                <!-- <label class="link-big link-login" for="a1"><input type="radio" name="a" id="a1" value="1" checked data-target="tologin">Sign in</label>
+                <label class="link-big link-register" for="a1"><input type="radio" name="a" id="a1" value="2" data-target="toregister">Join us</label> -->
+                
+            <div id="tologin" class="animate form--login">
+                <form action="#" method="GET">
+                    <p>
+                        <label for="name">Username</label>
+                        <input class="line" type="text" name="username" id="name" required>
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input class="line" type="password" name="password" id="password" minlength="3" required> 
+                    </p>
+                    <p>
+                        <label class="checked" for="checked"> 
+                        <input type="checkbox" id="checked">Keep me signed in</label>
+                    </p>
+                     <input class="line login--button" type="submit" value="Sign in"> 
+                    <a class="link-sm link-sm-margin" href="#">Forgot password</a>
+                    <a href="#toregister" class="link-sm">Create an account</a>
+                </form> 
+            </div>
+                
+            <div id="toregister" class="animate form">
+                <form action="#" method="GET">
+                    <p>
+                        <label for="name">Username</label>
+                        <input class="line" type="text" name="username" id="name--register" autofocus required>
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input class="line" type="password" name="password" id="password--register" minlength="3" required>  
+                    </p>    
+                    <p>
+                        <label for="password-repeat">Password repeat</label>
+                        <input class="line" type="password" name="password" id="password-repeat">
+                    </p>
+                    <input class="line login--button" type="submit" value="Join us"/> 
+                    <a href="#" class="link-sm link-sm-margin">Forgot password</a>
+                    <a class="link-sm" href="#">Create an account</a>
+                </form>
+            </div>
+        </div>
+</section>
+</body> 
+</html>
